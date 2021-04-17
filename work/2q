@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+char* strcpy(char* dst, const char* src){
+	if((dst == NULL) || (src == NULL)){
+		printf("Empty string!!\n");
+		return NULL;
+	}
+	char* d;
+	const char* s;
+	for(d = dst, s = src; *s != '\0'; d++, s++){
+		*d = *s;
+	}
+	*d = '\0';
+
+	return dst;
+}
+
+void strcpy2(char dst[], char src[]){
+	int i = 0;
+	while((dst[i] = src[i]) != '\0'){
+		i++;
+	}
+}
+
+int main(){
+	char src[20];
+	scanf("%s", src);
+	char dst[20];
+	//strcpy(dst, src);
+	strcpy2(dst, src);
+	printf("Copy string: %s\n", dst);
+}
