@@ -90,6 +90,7 @@ void printArray(int* array, int len){
 }
 
 void deleteHeap(minHeap* heap){
+	free(heap->array);
 	free(heap);
 }
 
