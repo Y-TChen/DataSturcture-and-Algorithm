@@ -7,6 +7,10 @@ int pow_of_two(int num){
 	return (num > 0 && !(num&(num-1)));
 }
 
+int pow_of_2(int num){
+	return ((num & -num) == num);
+}
+
 int main(){
 	
 	int num = 5;
